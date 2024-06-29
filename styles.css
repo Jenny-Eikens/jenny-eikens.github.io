@@ -1,0 +1,271 @@
+:root {
+    --color1: #3D84C2;
+    --color2: #EE3A55;
+    --color3: #866099;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  body {
+    font-family: 'Baskervville', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .gradient {
+    background: linear-gradient(to right, #3D84C2, #EE3A55);
+  }
+  
+  header {
+    color: white;
+    width: 100%;
+    height: 90px;
+    /* when using min-height, the nav height: 90% doesn't apply */
+    display: flex;
+    /* makes it so the nav-bar can be next to the image instead of below */
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+  }
+  
+  #header-img {
+    min-width: 70px; 
+    max-width: 75px;
+    /* prevents image from shrinking and stretching when resizing screen */
+    height: 85%;
+    margin: 5px;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  } /* aligns header img + span */
+  
+  .logo:hover {
+    cursor: pointer;
+  }
+  
+  nav /* this targets the nav-bar with its list */ {
+    width: 50%;
+    /* nav-bar takes up half of its parent element (header) */
+    max-width: 500px;
+    /* prevents nav from stretching out infinitely */
+    height: 90%;
+    /* takes up 90% of available 90px of header */
+    display: flex;
+    align-items: center;
+    margin: 5px;
+  }
+  
+  nav ul {
+    display: flex;
+    /* necessary for placing list items next to each other instead of below one another */
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* items will wrap onto new line if screen is too small */ 
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    /* nav and nav ul take up identical space (nav is parent element of nav ul) */
+    width: 100%;
+    overflow: hidden;
+    list-style: none;
+    /* removes bullet points */
+  }
+  
+  nav ul li {
+    margin-left: 10px;
+  }
+  
+  li a {
+    text-decoration: none;
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+  
+  body {
+    font-size: 20px;
+  }
+  
+  #hero {
+    margin: 150px 10px 0 10px;
+    text-align: center;
+  }
+  
+  #hero h1 {
+    font-size: 3rem;
+  }
+  
+  #hero h2 {
+    font-size: 2.3rem;
+  }
+  
+  #features {
+    padding: 15px;
+    display: block;  
+    margin: 60px auto;
+    text-align: center;
+  }
+  
+  #features-list {
+    list-style: none;
+    padding: 0;
+    display: inline-block;
+    margin: auto; 
+    text-align: left;  
+  }
+  
+  #features ul li {
+    padding-bottom: 13px;
+  }
+  
+  #features ul li:last-of-type {
+    padding-bottom: 0;
+  }
+  
+  i {
+    font-size: 1.3rem;
+  }
+  
+  iframe {
+    aspect-ratio: 16 / 9;
+    border: none;
+    margin-bottom: 50px;
+  }  
+  
+  #how-it-works {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  #pricing {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex: 1 1 25%;
+  }
+  
+  .flavors {
+    border: 5px solid;
+    border-image-source: linear-gradient(to bottom right,var(--color1), var(--color2), var(--color3));
+    border-image-slice: 1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 250px;
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  .flavors h4 {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  .icon {
+    width: 184px;
+    height: 184px; 
+    max-width: 980px;
+    margin: auto;
+  }
+  
+  .flavors ul {
+    height: 160px;
+    margin-bottom: 17px;
+  }
+  
+  form label,
+  form input {
+    display: block;
+    margin: 15px auto; 
+  }
+  
+  form label {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.7rem;
+    margin: 50px 20px 20px 20px;
+  }
+  
+  form input {
+    margin: 10px auto;
+    font-size: 1.2rem;
+    padding: 2px;
+    border: 1px solid black;
+    border-radius: 2px;
+  }
+  
+  form input:focus {
+    border: 3px solid var(--color1);
+    outline: none;
+  }
+  
+  input[type="submit"] {
+    width: 60%;
+    align-self: center;
+    margin-bottom: 5px;
+    padding: 5px;
+    font-size: 1.2rem;
+    background-color: var(--color3);
+    color: white;
+    border-radius: 3px;
+  }
+  
+  #submit {
+    margin: 20px auto;
+    font-size: 1.3rem;
+    width: 40%;
+    min-width: 130px;
+  }
+  
+  footer {
+    text-align: right;
+    padding: 10px;
+    width: 100%;
+    color: white;
+    font-size: 1rem;
+    margin-top: 60px; 
+  }
+  
+  footer ul {
+    list-style: none;
+    margin-bottom: 10px;
+  }
+  
+  footer ul li {
+    display: inline;
+    margin-left: 15px;
+  }
+  
+  li a {
+    color: white;
+  }
+  
+  li a:hover {
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    cursor: pointer;
+    box-shadow: 0 0 6px 3px var(--color3);
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+  }
